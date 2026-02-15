@@ -36,20 +36,16 @@ const HomePage = ({ addToCart }) => {
       ) : (
         products.map((product) => (
           <div className="product-card" key={product._id}>
-            
             {/* 👇 Product Image + Link */}
             <Link to={`/product/${product._id}`}>
               <div className="product-image">
                 {product.image ? (
                   <img
-                    src={`http://localhost:4000/uploads/${product.image}`}
+                    src={`${import.meta.env.VITE_API_URL}/uploads/${product.image}`}
                     alt={product.name}
-                    
                   />
                 ) : (
-                  <div className="image-placeholder">
-                    No Image
-                  </div>
+                  <div className="image-placeholder">No Image</div>
                 )}
               </div>
             </Link>
@@ -57,9 +53,7 @@ const HomePage = ({ addToCart }) => {
             <h3>{product.name}</h3>
             <p className="price">₹ {product.price}</p>
 
-            <button onClick={() => addToCart(product)}>
-              Add to Cart
-            </button>
+            <button onClick={() => addToCart(product)}>Add to Cart</button>
           </div>
         ))
       )}
