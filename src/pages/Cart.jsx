@@ -16,8 +16,11 @@ const Cart = ({ cartItems, setCart, removeFromCart }) => {
 
   const subtotal = cartItems.reduce(
     (total, item) => total + item.price * (item.quantity || 1),
-    0
+    0,
   );
+
+  // ✅ Move this above return
+  const isLoggedIn = !!localStorage.getItem("userId");
 
   const handlePlaceOrder = async () => {
     const userId = localStorage.getItem("userId");
@@ -37,7 +40,7 @@ const Cart = ({ cartItems, setCart, removeFromCart }) => {
     const orderData = {
       userId,
       items: cartItems.map((item) => ({
-        productId: item._id, // MUST exist
+        productId: item._id,
         name: item.name,
         price: item.price,
         quantity: item.quantity || 1,
@@ -48,9 +51,7 @@ const Cart = ({ cartItems, setCart, removeFromCart }) => {
     };
 
     try {
-   await axios.post(`${import.meta.env.VITE_API_URL}/api/orders`, orderData);
-
-
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/orders`, orderData);
 
       setCart([]);
       setShowAddressPopup(false);
@@ -71,17 +72,31 @@ const Cart = ({ cartItems, setCart, removeFromCart }) => {
         <>
           {cartItems.map((item, index) => (
             <div className="cart-item" key={item._id}>
-              <span>{item.name}</span>
-              <span>₹{item.price}</span>
+              <img
+                src={`${import.meta.env.VITE_API_URL}/uploads/${item.image}`}
+                alt={item.name}
+                className="cart-item-image"
+              />
+              <div className="cart-item-details">
+                <span>{item.name}</span>
+                <span>₹{item.price}</span>
+              </div>
               <button onClick={() => removeFromCart(index)}>Remove</button>
             </div>
           ))}
 
           <h3>Subtotal: ₹{subtotal}</h3>
 
-          <button className="order-btn" onClick={() => setShowAddressPopup(true)}>
+          <button
+            className="order-btn"
+            onClick={() => setShowAddressPopup(true)}
+            disabled={!isLoggedIn} // disabled if not logged in
+          >
             Order Now
           </button>
+          {!isLoggedIn && (
+            <p className="login-warning">Please login to place order</p>
+          )}
         </>
       )}
 
