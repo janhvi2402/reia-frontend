@@ -1,0 +1,152 @@
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+}
+
+.auth-card {
+    display: flex;
+    width: 900px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Left Side Form */
+.auth-left {
+    width: 50%;
+    padding: 60px;
+}
+
+.auth-left h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 45%;
+    height: 1px;
+    background: #eee;
+}
+
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 45%;
+    height: 1px;
+    background: #eee;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #eee;
+    background: #fcfcfc;
+    border-radius: 6px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #f87171;
+    /* The soft red from your image */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Right Side Visuals */
+.auth-right {
+    width: 50%;
+    background: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.mockup-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    max-width: 250px;
+    text-align: center;
+}
+
+.mockup-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+span:hover {
+    text-decoration: underline;
+}
+
+.social-btn:hover {
+    background-color: #f9fafb;
+    border-color: #ccc;
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+    background-color: #ef4444;
+}

@@ -1,0 +1,77 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #333;
+}
+
+.logout-btn {
+    border: none;
+    background: #ff4d4f;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.home{
+    width: 27px;
+    height: 27px;
+    border-radius:5px ;
+}
+
+.log{
+    width: 30px;
+    height: 30px;
+}
+
+.user2{
+    width: 30px;
+    height: 30px;
+}
+.seller2{
+    width: 28px;
+    height: 28px;
+}
+.cart2{
+    width: 25px;
+    height: 25px;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Username specifically */
+.nav-user span {
+    color: white;
+}

@@ -1,0 +1,66 @@
+/* Login.css */
+.auth-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-container form {
+    width: 100%;
+    /* important to make inputs full width */
+    display: flex;
+    flex-direction: column;
+    /* stack inputs vertically */
+    gap: 15px;
+    /* spacing between inputs */
+}
+
+.auth-container input {
+    width: 100%;
+    /* full width inputs */
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+    /* prevent input overflow */
+}
+
+.auth-container input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.auth-container button:hover {
+    background: #1d4ed8;
+}
+
+.auth-container p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
