@@ -16,7 +16,7 @@ function Navbar({ cartCount, isLoggedIn, setIsLoggedIn }) {
       {/* Left */}
       <div className="nav-left">
         <img
-          src="asset/Screenshot 2026-01-26 at 10.45.57 PM.png"
+          src="/asset/Screenshot 2026-01-26 at 10.45.57 PM.png"
           alt="ShopKart Logo"
           className="logo-img"
         />
@@ -26,24 +26,24 @@ function Navbar({ cartCount, isLoggedIn, setIsLoggedIn }) {
       {/* Right */}
       <div className="nav-right">
         <Link to="/">
-          <img src="asset/148-1484883_icon-house-orange-stock-vector-colourbox-house-icon.png" alt="Home" className="home"/>
+          <img src="/asset/148-1484883_icon-house-orange-stock-vector-colourbox-house-icon.png" alt="Home" className="home"/>
           Home
         </Link>
 
         <Link to="/cart">
-          <img src="asset/images.png" alt="Cart" className="cart2"/>
+          <img src="/asset/images.png" alt="Cart" className="cart2"/>
           Cart ({cartCount})
         </Link>
 
         {!isLoggedIn ? (
           <Link to="/login">
-            <img src="asset/5180068.png" alt="Login" className="log"/>
+            <img src="/asset/5180068.png" alt="Login" className="log"/>
             Login
           </Link>
         ) : (
           <>
             <div className="nav-link nav-user">
-              <img src="asset/images.jpeg" alt="User" className="user2" />
+              <img src="/asset/images.jpeg" alt="User" className="user2" />
               <span>{username}</span>
             </div>
 
